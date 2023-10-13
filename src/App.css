@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --accent-blue: #0290f5;
+    --accent-grey: #e6e1dd;
+    --accent-primary: #575756;
+    --text-primary: #575756;
+    --text-accent: #aeacaa;
+    --bg-accent: #dad8d7;
+    --flex-flow: calc((32rem - 100%) * 999);
+    --flow-condition: calc((41.25rem - 100vw) * 999);
+}

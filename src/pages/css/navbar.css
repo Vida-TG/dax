@@ -1,0 +1,119 @@
+@media only screen and (max-width: 520px) {
+    header {
+        position: relative !important;
+    }
+  }
+a, Link {
+    text-decoration: none;
+}
+
+header {
+    --space: clamp(1rem, calc(-17.7rem + 48.48vw), 2rem);
+    --width: 50rem;
+    --height: 3rem;
+    --logo: 5em;
+
+    inline-size: clamp(412px, var(--width), 90vw);
+    min-height: var(--height);
+    position: fixed;
+
+    display: grid;
+    grid-template-columns: var(--space) 1fr var(--space);
+    padding: 0.5rem;
+    width: 100vw;
+    background: var(--accent-grey);
+    border: clamp(0px, var(--flow-condition), 0.125rem) solid var(--accent-grey);
+    border-radius: 0.5em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header-content {
+    grid-column: 2 / 3;
+    gap: 0.75rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header-content > * {
+    flex: 1 1 var(--flex-flow);
+}
+
+.brand-logo {
+    display: flex;
+    font-size: 1.375rem;
+    border-radius: 0.25rem;
+}
+
+.logo {
+    margin-inline: auto;
+    width: var(--logo);
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    padding-block: clamp(0px, var(--flow-condition), 0.5rem);
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 1.125em;
+    color: var(--accent-primary);
+    opacity: .8;
+}
+
+.logo-text {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+[role="navigation"] {
+    flex-grow: 999;
+    display: flex;
+}
+
+.navigation-list-container {
+    display: flex;
+    margin-inline: auto;
+    gap: 0.25rem;
+    list-style: none;
+}
+
+.link2 {
+    margin: auto 15px;
+    cursor: pointer;
+}
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 8ch;
+    font-size: 15.3px;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-family: monospace;
+    position: relative;
+    padding-block: 0.7rem;
+}
+
+ul:hover .nav-link:not(:hover) {
+    color: var(--text-accent);
+}
+
+ul:hover .nav-link:focus {
+    color: var(--accent-blue);
+}
+
+.nav-link:hover:not(:focus) {
+    background-color: var(--bg-accent);
+}
+
+a:focus-visible, Link:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: -1px;
+    border-radius: 0.25rem;
+}
+
+.nav-link:focus {
+    color: var(--accent-blue);
+}
